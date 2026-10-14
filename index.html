@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="A magical interactive love cheer card created especially for Shai, the Vanilla Princess."
+  />
+  <title>For My Vanilla Princess, Shai ♡</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Nunito:wght@400;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+<base target="_blank">
+</head>
+<body>
+  <!-- Animated background layers -->
+  <div class="aurora aurora-one" aria-hidden="true"></div>
+  <div class="aurora aurora-two" aria-hidden="true"></div>
+  <div class="aurora aurora-three" aria-hidden="true"></div>
+  <div class="stars-layer" id="starsLayer" aria-hidden="true"></div>
+  <div class="glow-orb orb-one" aria-hidden="true"></div>
+  <div class="glow-orb orb-two" aria-hidden="true"></div>
+  <div class="rain-layer" id="rainLayer" aria-hidden="true"></div>
+  <div class="sparkle-layer" id="sparkleLayer" aria-hidden="true"></div>
+  <div class="burst-layer" id="burstLayer" aria-hidden="true"></div>
+
+  <main class="page-shell">
+    <section class="hero" aria-labelledby="pageTitle">
+      <p class="eyebrow">A tiny universe made just for you</p>
+      <h1 id="pageTitle">For My Vanilla Princess, Shai <span aria-hidden="true">♡</span></h1>
+      <p class="hero-subtitle">
+        Open this little card whenever your heart needs a warm hug, a proud cheer,
+        or a reminder of how deeply you are loved.
+      </p>
+    </section>
+
+    <section class="card-stage" aria-label="Interactive love cheer card">
+      <div class="card-scene" id="cardScene">
+        <button
+          class="love-card"
+          id="loveCard"
+          type="button"
+          aria-label="Open the love card for Shai"
+          aria-pressed="false"
+        >
+          <span class="card-halo" aria-hidden="true"></span>
+
+          <span class="card-base" aria-hidden="true">
+            <span class="card-paper card-inside">
+              <span class="inside-glow"></span>
+              <span class="inside-flower flower-a">✿</span>
+              <span class="inside-flower flower-b">❀</span>
+              <span class="inside-heart">♡</span>
+              <span class="inside-title">To Shai,</span>
+              <span class="inside-message">
+                You are braver than you know, stronger than you feel, and loved
+                beyond every word in this little universe.
+              </span>
+              <span class="inside-sign">Always cheering for you ♡</span>
+            </span>
+
+            <span class="card-cover">
+              <span class="cover-face cover-front">
+                <span class="cover-pattern pattern-top">✦ ♡ ✦ ♡ ✦</span>
+                <span class="cover-heart">♡</span>
+                <span class="cover-title">Open When You Need<br />a Little Love</span>
+                <span class="cover-caption">made for Shai</span>
+                <span class="cover-pattern pattern-bottom">❀ ✧ ❀ ✧ ❀</span>
+              </span>
+              <span class="cover-face cover-back">
+                <span class="back-heart">♡</span>
+              </span>
+            </span>
+          </span>
+        </button>
+      </div>
+    </section>
+
+    <section class="actions" aria-label="Love message controls">
+      <button class="action-button pink" id="loveButton" type="button">
+        <span aria-hidden="true">♡</span> Tap for Love
+      </button>
+      <button class="action-button lavender" id="reminderButton" type="button">
+        <span aria-hidden="true">✿</span> A Little Reminder
+      </button>
+      <button class="action-button gold" id="princessButton" type="button">
+        <span aria-hidden="true">✨</span> For My Princess
+      </button>
+    </section>
+
+    <section class="status-panel" aria-live="polite">
+      <p>
+        Love messages discovered:
+        <strong id="messageCounter">0</strong>
+      </p>
+      <button
+        class="music-button"
+        id="musicButton"
+        type="button"
+        aria-label="Play romantic background music"
+        aria-pressed="false"
+      >
+        <span class="music-icon" aria-hidden="true">♪</span>
+        <span class="music-text">Play Music</span>
+      </button>
+    </section>
+  </main>
+
+  <!-- Animated love-message dialog -->
+  <div class="popup-backdrop" id="popupBackdrop" aria-hidden="true">
+    <section
+      class="message-popup"
+      id="messagePopup"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="popupTitle"
+      aria-describedby="popupMessage"
+      tabindex="-1"
+    >
+      <div class="popup-hearts" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <p class="popup-kicker" id="popupTitle">A message for Shai</p>
+      <p class="popup-message" id="popupMessage"></p>
+      <div class="popup-actions">
+        <button class="popup-button secondary" id="anotherButton" type="button">
+          Show Another ♡
+        </button>
+        <button class="popup-button primary" id="closePopupButton" type="button">
+          Keep This Love
+        </button>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
